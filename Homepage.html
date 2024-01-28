@@ -1,0 +1,403 @@
+
+<html>
+    <head>
+        <meta charset="UTF-8"></meta>
+        <meta content="IE edge" htttp-equiv="X-UA-Compatible"></meta>
+      
+<meta content="width=device-width, initial-scale=1.0, user-scalable=no" name="viewport"> </meta>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"></link>
+        <title> Muvi Plex</title>
+        <style>
+            *{
+    margin:0;
+    box-sizing: border-box;
+}
+body{
+    font-family: : Arial, Helvetica, sans-serif;
+    background-color: #111;
+
+}
+
+.row_poster {
+    width:100%;
+    object-fit: contain;
+    max-height: 200px;
+    margin-right: 10px;
+    transition: transform 450ms;
+  
+}
+.row__posters {
+    display: flex;
+ 
+    padding: 20px;
+}
+.row_poster:hover {
+    transform: scale(1.08);
+}
+
+.row__posters::-webkit-scrollbar {
+    display: none;
+}
+
+.row_posterLarge{
+    max-height: 250px;
+    width
+    
+}
+.row_posterLarge:hover{
+    transform: scale(1.09);
+}
+
+.row, h2{
+    color: white;
+    margin-left: 20px;
+    overflow-x: scroll;
+    
+}
+
+::-webkit-scrollbar {
+  width: 1px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px #111; 
+  border-radius: 1px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-button{
+  background: rgb(0, 0, 0); 
+  border-radius: 1px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-button:hover {
+  background: #000000; 
+}
+
+
+.banner{
+    background-image: url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgKjSW8w6apzXRFsAmtg8RYvHKcwz5NeF-v-cGaH7HTb_PjN59GcoKuh3p35YD7RDk3FYGGjybD2M2IN79YPIlOgjuaDFPV5N1j14G_xEMpEAuHV6xWltnQ2N4Zg3NYEofoRq4dIGCzg-73n4ARUEsBiX3DpoMyEdawymrA-z2yG4OeC-blSzwOORWtC_I6/s1280/AAAABezth5iet70ZzPzvGsgU-JfLW-mfVsK4D8oYTJkRag36kd4oWCMceKByA6HZM7qdiibw-HY43dluse_2j2CVNyo63kium0nWqa8V.jpg');
+    background-size: cover;
+    background-position: center center center;
+    color: white;
+    object-fit: contain;
+    height: 448px;
+    margin-right: 0px;
+    margin-top: 12px;
+}
+
+.banner__contents{
+    margin-left: 30px;
+    padding-top: 140px;
+    height: 190px;
+}
+
+.banner_title {
+    font-size: 3rem;
+    font-weight: 800;
+    padding-bottom: 0.3rem;
+}
+
+.banner__description{
+    width: 60rem;
+    line-height: 1.3;
+    padding-top: 1rem;
+    font-size: 1rem;
+    max-width: 446px;
+    height: 180px;
+    font-weight: 1000;
+          }
+.banner__button{
+    cursor:pointer;
+    color: #fff;
+    outline: none; 
+    border: none;
+    font-weight: 700;
+    border-radius: 0.2vw;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin-right: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    background-color: rgba(51, 51,51, 0.5);   
+}
+
+.banner__button:hover {
+    color:black;
+    background-color: #e6e6e6;
+    transistion:all 0.2s;
+
+}
+
+.banner--fadeBottom {
+    margin-top: -120px;
+    height: 7.4rem;
+    background-image: linear-gradient(180deg, transparent, rgba(2, 2, 2, 0.61), #111);
+}      
+.banner--fadeside {
+    margin-top: -191px;
+    height: 28.4rem;
+    background-image: linear-gradient(-90deg, transparent, rgba(2, 2, 2, 0.61), #111);
+    width: 45%;
+    margin-left: -30px;
+}
+
+.nav__logo {
+    width: 30px;
+
+    object-fit: contain;
+}
+.nav__avatar {
+    width: 150px;
+    object-fit: contain;
+}
+
+
+
+.nav{
+    position: fixed;
+    top: 0;
+    width: 30%;
+    display: flex;
+    
+    padding: 20px;
+    z-index: 1;
+    transition-timing-function: ease-in;
+    transition: all 0.5s;
+}
+@media only screen and (max-width: 768px) {
+    /* Adjustments for mobile devices */
+
+    body {
+        font-size: 10px; /* Adjust as needed */
+    }
+  
+
+    .row_poster, .row_posterLarge {
+        max-height: 130px; /* Adjust as needed */
+    }
+
+    .banner {
+        height: 300px;
+        width:100%; * Adjust as needed */
+        background-position: center center;
+       color: white;
+       object-fit: contain;
+    }
+
+    .banner__contents {
+        padding-top: 60px; /* Adjust as needed */
+        height: auto;
+    }
+
+    .banner_title {
+        font-size: 2rem; /* Adjust as needed */
+        margin-top: 50px;
+    }
+
+    .banner__description {
+       
+        width: 100%;
+        font-size: 0.8rem;
+        max-width: none;
+      font-weight: 500;
+        
+        
+    }
+
+    .row, h2 {
+        overflow-x: auto;
+    }
+
+    .row__posters {
+        padding: 10px;
+    }
+
+    .nav {
+        padding: 10px;
+    }
+
+    .nav__logo {
+        width: 35px; 
+      
+    }
+
+    .nav__avatar {
+        width: 100px;
+      /* Adjust as needed */
+    }
+
+    .banner__button, .banner__button:hover {
+        font-size: 0.8rem; /* Adjust as needed */
+    }
+ .banner--fadeBottom {
+    margin-top: -90px;
+    height: 7.4rem;
+    background-image: linear-gradient(180deg, transparent, rgba(2, 2, 2, 0.61), #111);
+}
+  .banner--fadeside {
+    margin-top: -392px;
+    height: 19.4rem;
+    background-image: linear-gradient(-90deg, transparent, rgba(2, 2, 2, 0.61), #111);
+    width: 70%;
+    margin-left: -30px;
+}
+}
+
+
+
+
+
+
+        </style>
+
+    </head>
+    <body>
+ 
+        <div class="nav" id="nav">
+            <img alt="" class="nav__logo" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj_ZJi-bJTSwfU0fDnTKHtXSWBJJTKqqKBO6aGF61bMB2qXhgvJ6m65KM6qvU2jeVn4rfR9tjQetM4edSzSkpus061CWdSIyDdLF6HZfujW3T_6HG8b67pEe0li_vqBsBQmV8jYXg7Byq8Q-E2ODE1NNYIgVSWo9WhVv0Bj0oALLYQQ6DuxxZAOUrXlypIC/s495/1704302963660.png" />
+            <img alt="" class="nav__avatar" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEijQ5bVZVDn0I5kV1xllI-6jgxcOP2hpoUjFcnDUv5JgtgotqrwsnfNKpnKq1orQQooVeCHQfOiGD7qvilLLjilivR33k7wSFIjMdZZGpk4sxRVAuZknYHnTMu0NdMCMzYOFEbIUqceUw-WJAVQLkXB0mP4Q1J8G54NgqQSUI1KGf9d_Y42YMe_4Gah6Bw/s500/muvi_Plex__1_-removebg-preview.png" />
+        </div>
+          
+        <!--header-->
+        <div class="banner">
+            
+            <div class="banner__contents">
+             
+                <h1 class="banner_title">Animal</h1>
+                <div class="banner__buttons">
+                    <button class="banner__button" onclick="document.location='https://muviplex2024.blogspot.com/2024/01/animal.html'">
+  <i class="fa fa-play" aria-hidden="true"></i> Play
+</button>
+                    
+                 <button class="banner__button"><i class="fa fa-arrow-down" aria-hidden="true"></i> Download</button>
+                </div>
+                <div class="banner__description">
+                     The hardened son of a powerful industrialist returns home after years abroad and vows to take bloody revenge on those threatening his father's life.
+                </div>
+             
+            </div>
+           <div class="banner--fadeside"></div>
+            <div class="banner--fadeBottom"></div>
+             
+        </div>
+
+
+
+       <!--Muvi Plex Originals-->  
+       <h2>MUVI PLEX ORIGINALS</h2>      
+       <div class="row">
+            
+            <div class="row__posters">
+              <img alt="banner" class="row_poster row_posterLarge" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiAgB9nKXNGRFhM2AtCBoa8Sk4WNSkm0Nq-EDCZAgdiKSiLZpygxfKTgA7TYnfLSH7Ld5Q0mhQE96NOLDikELgO0yHDUU1ablpLJL3pVPIHHUZ4hkFjMmL6z1NIE9Wbdd_gC4FurHenT7AJdwqlBVuGUO8F_pHbt76ICd96yf-eUB-MVbajsMA0abciDPl1/s1280/IMG_20240126_082447_212.jpg" onclick="window.location.href='https://muviplex2024.blogspot.com/2024/01/animal.html'"/>
+              
+              
+                <img alt="banner" class="row_poster row_posterLarge" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgUYovBKj8zYAlhMsoGoTepdYubUaUaCuoLYVZZiZP6Bf9_ONmP73R-oGPjOIQ-afWCJPfeZ8rxEiSvQ3T5DlOGZXK12aFnkJmKDV8h-WFwursWrUPgqcstZvQf2LY_BBQhc4KR-Vgn7ELwULoAK9hBAz9yiOmQUmyfZZI83y2T7OnAD1OjucteIwSl4S4/s1280/Untitled%20design.png" onclick="window.location.href='https://muviplex2024.blogspot.com/2023/12/jawan-2023.html'"/>
+              <img alt="banner" class="row_poster" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi9lj-mxuxkSwTuI5rGIjb8HvdaPmnk_h89UB-BVlqr-7IUaFmmxcNLQFWumx32cGrJYyvUXEHY3e_SGdNTvjx2Ju2j6DwRK6NffdQ1QHqF7dWTGvn9MMW2Ojj-fURc5vuQz2ZWnNS0V301P1tVCtKRrx8wABl3Huyr5n-7LvdTttp7o53mWbzl95TIOa4b/s711/salaar.jpg" onclick="window.location.href='https://muviplex2024.blogspot.com/2024/01/salaar.html'"/>
+                <img alt="banner" class="row_poster row_posterLarge" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjAH_S5zTXUI2KMvuA0xg7rsds_HtCgeuI9CsTdEzGB-0U6Wg8TyvbSw3OGE5bvrqEA-sNBToZzpjIarlicF8v9hbh6252-iY-I2KkG8-sRGImlgeGKFQlJHueyqxMNCRgQbwN3Z8WnisSRnVCy7b_K44ArPnpwH98KB0aevlE8oInU6mCysZXNkNChQvk/s1280/Untitled%20design%20%281%29.png" onclick="window.location.href='https://muviplex2024.blogspot.com/2023/12/3.html'"/>
+                <img alt="banner" class="row_poster row_posterLarge" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiDzDoNHhxq2Etge9gw5nnBOcZZ4XyAGPYvsFuz2EBc3Gxq-OyKeSayUrh-QgrgPO8suHH8qUydJ3nHQOLsxYwPak_94KUIUqtupKtHtQ1gRVrEWtdCgl1IBLInK5tH-yBmYC7ZUa-d7LA-J0YbP7EuHlP-idWDwt4ojlYif0vvxvZLv6eO9BCaqayi_ypW/s739/images-1.jpeg" onclick="window.location.href='https://muviplex2024.blogspot.com/2024/01/crayon-shin-chan-my-moving-story-cactus.html'"/>
+                <img alt="banner" class="row_poster row_posterLarge" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgpLuLqb_w3p_0o_c85lKWgWTegzR7wruUbAMJxy3odf6wyqyg2PAlHpaa94WvSlQVsldKEmO0PV5txvec3yTaeI3ONmlEUIMJQit93_OA8oCMtmygMpHtL03boQnE15Dw4s0AN0VI1-q0EhAr26N_SLruFEscKeFbUiycKmL4yHJUdz5vqJOJy106Boys/s1280/Untitled%20design.png" onclick="window.location.href='https://muviplex2024.blogspot.com/2023/12/leo.html'"/>
+                <img alt="banner" class="row_poster row_posterLarge" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhfI9CeKNjgEMeblw2uSmih7Qss2n9EEiTQHEQ_ULRvtXog56xZOD4usHvUkbQsiz8aF3rF7xklJo3m5f_KofpUpMlkhfIId43QhzJw_8FAwZqrbhS3NbjVOI2tHz2vJrWBdTlh8wSxNofcfiiGFrlnWpVu1xkNP6zQeVcBT1U3DoS1HjtBIr9Gwz04WKZo/s720/6d97232dea4868eb8a2ac26c1ba4e6a341ab91ccf27b29cf08d35e7730b386d7._UR1920,1080_SX720_FMpng_.png" onclick="window.location.href='https://muviplex2024.blogspot.com/2023/12/hey-ram-2000.html'"/>
+                <img alt="banner" class="row_poster row_posterLarge" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhhqI-gR_olR145AZJvEb_VtPvhnjLHzvjYE1Qko0dEaY3fIp1GDejK786OCCL54mCJgU11nVN_56lx86d6kYg2AHekMe2wIVeRIcNpIQgUHzy3Zr9pxuppeatFT-llxfKaYulXFeSXeFQ92v0m1SKWKz2bHCuD7ZKmvxYJTldb8o-HKKHmu8espFdGNeYo/s739/images%20(2).jpeg" onclick="window.location.href='https://muviplex2024.blogspot.com/2023/12/cj-7-2008.html'" />
+                <img alt="banner" class="row_poster row_posterLarge" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjnCcRJc-9RGdLRavIS96_2BrKbUhtJwczSR2BjIWKnwqf1ZSnoYDE6VlvAhOVVRp_7dRraL_MfNQJNT35IPop1pGJTT16dtsPlLYuq40nQEUN0zqo0Vjn4a5xC7oxWxZoYMwch4GlwlDuA_3gcjTejdkDhUiYrvUJNbjNEKblGKB5ykTtUSUCTLfkBCZ3u/s512/AAAABSnhNFsA1q_YL8JarKkgUE-we_P_M0WAqnUZQzvdUImmDBjB0Qsr80ILPAU2lUBJiTdTCcuGXbotcXAOyEzZ41Na4RtU-ScZHExp.jpg" onclick="window.location.href='https://muviplex2024.blogspot.com/2023/12/adipurush-2023.html'"/>
+                <img alt="banner" class="row_poster row_posterLarge" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEipWh-gQcJsA5TmAAlu858S-Prquffu2mt69drmSMB_jXiGC7ojE-eJQI3eycfJVRSHP94fFzbACDVMIHx-IPVFTDp-07de27IsV7fIMSQM6Z_H3kRADvfD20hqigSVRGl8gjoIcuCk0tj66tPfsQ1jxKr4A72a4g53YuaS88FkLEFVEzM3XcWAu7TdHwjV/s1280/jigarthanda-double-x-et00359702-1699446701.jpeg" onclick="window.location.href='https://muviplex2024.blogspot.com/2023/12/jigarthanda-doublex.html'"/>
+            </div>
+        </div>
+        <h2>Trending Now</h2>
+        <!-- Trending Now-->
+        <div class="row">
+            
+            <div class="row__posters">
+              <img alt="banner" class="row_poster" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg-KpNmmMYCYLs9YDIepMj9d4gjt9EYVtxyX0PtxVUJ2BElJWkqK279uIaEJPWDTEekVx5-WSDCVH6u5Y6aD4b7IpC1F3jnHNiPwFsq38LhfTJEuX-IRUo8QrejHc-r0spyU2LEEPjvyB9cKjiACBn2-DNvcVrGXhs0jknudc0NV_K28bbo3P8A8IF469e4/s739/images.jpeg" onclick="window.location.href='https://muviplex2024.blogspot.com/2024/01/bigg-boss-7-tamil-grand-finale-live.html'"/> 
+             
+              
+              <img alt="banner" class="row_poster" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjW-0c_tQDcA8w6z29LvkaOFaGOEmXownbtWotJYmETcVdBcxD_D7XCJYiYXHGCrL82xLWk8nfkQfeb2OioP7HCzvzc-fVyEIl_mOxV1ggcTpXFGZRYdQep94WLKcjxLDt1-7e4sosrFkY4izHdhleWeEvh4Nj8L6XSVxm-eR5gLBtd4r5QHE9ETO8NURBz/s1920/1647912-h-4635b7060678%20%281920%C3%971080%29.jpg" onclick="window.location.href='https://muviplex2024.blogspot.com/2024/01/joe-2023.html'"/>
+              <img alt="banner" class="row_poster" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhxxNqh5Ts4Xc7qw_kS-JCHYe1DQiDBYjdyGx7I9alAoqqI91XGvlSLVoUQJJpoO9lVSywMA4WkwrrVQt2V6L31DKPi5pYf__nKFD_AETqjkmYfbiOEEYk7yEZJzXqJMIe41MoMv3Wi2wFiKWoL9TIuoCa42tQoxDDuZDmmSSozUeflJViwYiZWKSNT7rxg/s783/images%20%285%29.jpeg" onclick="window.location.href='https://muviplex2024.blogspot.com/2024/01/hi-nanna.html'"/>
+              <img alt="banner" class="row_poster" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiAgB9nKXNGRFhM2AtCBoa8Sk4WNSkm0Nq-EDCZAgdiKSiLZpygxfKTgA7TYnfLSH7Ld5Q0mhQE96NOLDikELgO0yHDUU1ablpLJL3pVPIHHUZ4hkFjMmL6z1NIE9Wbdd_gC4FurHenT7AJdwqlBVuGUO8F_pHbt76ICd96yf-eUB-MVbajsMA0abciDPl1/s1280/IMG_20240126_082447_212.jpg" onclick="window.location.href='https://muviplex2024.blogspot.com/2024/01/animal.html'"/>
+              <img alt="banner" class="row_poster" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg_BCi06ebvH4q1CR83sC8XPsQ6W1YJZCmyHdt1sztzRI7fjQr816C5LI3KanvJQjQY5_CCdHaXwRlEI2NHBO-RJduXSUHzUA13hWf9zw-zHUuyrcRpMoMMa9JgpLxqTwp6akzHrP8TJvthb4pdQ8Mi-KtaL19p7kP5aiAc3SDdhuScdWsQtxB1w_gfH17q/s480/parking-2023-et00377279-1701064823.jpg" onclick="window.location.href='https://muviplex2024.blogspot.com/2023/12/parking-2023.html'"/>
+              
+                <img alt="banner" class="row_poster" src="https://image-resizer-cloud-api.akamaized.net/image/CF06EE1E-9161-4365-8599-802D57553D71/0-16x9.jpg?width=2400&updatedTime=2023-12-12T23:00:39Z&dt=Web" onclick="window.location.href='https://muviplex2024.blogspot.com/2023/12/2012-2008.html'">
+              
+                <img alt="banner" class="row_poster" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgk3o-ze_6tZOEinp0h5B6zmhYWls0MNEQeS5ZGVBLYeirDnMe3wlF5-ljGPJqdP9tk8-3j0M4Zz0nfQRtTS9oxKXXxx8S4TRwvNmi0bUUcTwAYlrgoWLggNG67GwV29rm52Eseg7wBiNLlCxGNz2FB2iMUlkEABa12SDrrdi8aMdn7k4fr8em8uGkNmVzw/s1024/Untitled%20design_20231231_233532_0000.png" onclick="window.location.href='https://muviplex2024.blogspot.com/2023/12/curry-cyanide.html'"/>
+                
+                <img alt="banner" class="row_poster" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhqZyWoPEmQ7IIv2u20rvWrx7tbHuPTeUtNFCX_zp2wctgpzKgTemGYwejhGW4oQhBS5Ynwto74FI3gnOE-3M4QlGhze9uHApkjmk2ltolCAMt5ACCKD2412Z1n8hJxXHR0mzVe95aJvPEJfvTzVoptW27Un9LArgHbyk8-kmbNYv5lLhl65dnyyLJeP3rl/s640/images%20(5).jpeg" onclick="window.location.href='https://muviplex2024.blogspot.com/2023/12/run-baby-run-2023.html?m=1'" />
+                
+
+            </div>
+
+        </div>
+      <h2>Coming Soon</h2>
+
+      
+
+        <div class="row">
+
+            
+
+            <div class="row__posters">
+
+               
+
+                
+
+                
+<img alt="banner" class="row_poster" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgPhUSpFFcUn_IjRZfPyNnAFk3uiB96QTlZ5Zwgg2-ApF_eC9eTeqy-2B9zqJgAwS1Ju7xD4zP9tE5iXRUrUkgNg_Am1lWk-euv11wrl1SYdTdxDgLfOBP6UEKm75mJ7zWzAoT2hPGdtqp-g5OvC72psA3T2gCgQLl7Hlk6WMSG4ZL9NfCCP9QLGkGlR-li/s1280/et00379120-yepzmfxgpg-landscape.jpg" onclick="window.location.href=' https://muviplex2024.blogspot.com/2024/01/fight-club.html'"/>
+              
+
+           
+                
+
+            </div>
+
+        </div>
+        <!-- Top Rated-->
+       <h2>Top Rated</h2>
+        <div class="row">
+           
+            <div class="row__posters">
+             
+              <img alt="banner" class="row_poster" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhLjZ4PHtW6p5aCvWve8Vo_KZ8_-l1jJc3_pJgKSJm4ed-4Au73t1nU9XKL-SoIQNz-MPuJPnV8tGBrgzQvz8hv6G5JXyU1owhj-70GPuLS-Qxl1l4jYdkkTEd-jHe6DUV2c1hNzApvJrjEST7UjrC1XaR_Xym3EfgIQRJHVTHfHxwJCh5wgR3wPWOiXfcL/s1280/IMG_20240107_103423_795.jpg" onclick="window.location.href='https://muviplex2024.blogspot.com/2024/01/tiger-3.html'"/> <img alt="banner" class="row_poster" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi9lj-mxuxkSwTuI5rGIjb8HvdaPmnk_h89UB-BVlqr-7IUaFmmxcNLQFWumx32cGrJYyvUXEHY3e_SGdNTvjx2Ju2j6DwRK6NffdQ1QHqF7dWTGvn9MMW2Ojj-fURc5vuQz2ZWnNS0V301P1tVCtKRrx8wABl3Huyr5n-7LvdTttp7o53mWbzl95TIOa4b/s711/salaar.jpg" onclick="window.location.href='https://muviplex2024.blogspot.com/2024/01/salaar.html'"/>
+              <img alt="banner" class="row_poster" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjW-0c_tQDcA8w6z29LvkaOFaGOEmXownbtWotJYmETcVdBcxD_D7XCJYiYXHGCrL82xLWk8nfkQfeb2OioP7HCzvzc-fVyEIl_mOxV1ggcTpXFGZRYdQep94WLKcjxLDt1-7e4sosrFkY4izHdhleWeEvh4Nj8L6XSVxm-eR5gLBtd4r5QHE9ETO8NURBz/s1920/1647912-h-4635b7060678%20%281920%C3%971080%29.jpg" onclick="window.location.href='https://muviplex2024.blogspot.com/2024/01/joe-2023.html'"/> 
+              <img alt="banner" class="row_poster" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhqZyWoPEmQ7IIv2u20rvWrx7tbHuPTeUtNFCX_zp2wctgpzKgTemGYwejhGW4oQhBS5Ynwto74FI3gnOE-3M4QlGhze9uHApkjmk2ltolCAMt5ACCKD2412Z1n8hJxXHR0mzVe95aJvPEJfvTzVoptW27Un9LArgHbyk8-kmbNYv5lLhl65dnyyLJeP3rl/s640/images%20(5).jpeg" onclick="window.location.href='https://muviplex2024.blogspot.com/2023/12/run-baby-run-2023.html?m=1'" />
+                <img alt="banner" class="row_poster" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEipWh-gQcJsA5TmAAlu858S-Prquffu2mt69drmSMB_jXiGC7ojE-eJQI3eycfJVRSHP94fFzbACDVMIHx-IPVFTDp-07de27IsV7fIMSQM6Z_H3kRADvfD20hqigSVRGl8gjoIcuCk0tj66tPfsQ1jxKr4A72a4g53YuaS88FkLEFVEzM3XcWAu7TdHwjV/s1280/jigarthanda-double-x-et00359702-1699446701.jpeg" onclick="window.location.href='https://muviplex2024.blogspot.com/2023/12/jigarthanda-doublex.html'"/>
+                <img alt="banner" class="row_poster" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjnCcRJc-9RGdLRavIS96_2BrKbUhtJwczSR2BjIWKnwqf1ZSnoYDE6VlvAhOVVRp_7dRraL_MfNQJNT35IPop1pGJTT16dtsPlLYuq40nQEUN0zqo0Vjn4a5xC7oxWxZoYMwch4GlwlDuA_3gcjTejdkDhUiYrvUJNbjNEKblGKB5ykTtUSUCTLfkBCZ3u/s512/AAAABSnhNFsA1q_YL8JarKkgUE-we_P_M0WAqnUZQzvdUImmDBjB0Qsr80ILPAU2lUBJiTdTCcuGXbotcXAOyEzZ41Na4RtU-ScZHExp.jpg" onclick="window.location.href='https://muviplex2024.blogspot.com/2023/12/adipurush-2023.html'"/>
+            <img alt="banner" class="row_poster" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgGt9eJAXsGbB_yGV_CvDNwWJFJu1ZiJAgqQiwhjH9IcMw3MgNOgmknrH92sbf1O5Ktuo5YqDOrr_Wrdvk6rKnwOvjXPWqSxY_6t1Beb28GwmRBGb1dH4hodh41f01YiIzwgyJ_XKN-9SMpW9rn0TMs7HclUukgcrXimP_ZLqSJRkom8HEKAZR0lJ4sF-c/w640-h360/Untitled%20design%20(2).png" onclick="window.location.href='https://muviplex2024.blogspot.com/2023/12/jawan-import-urlhttpsfonts.html'"/>
+               
+
+            </div>
+        </div>
+        <!-- Action Movies-->
+      <h2>Action Movies</h2>
+      
+        <div class="row">
+            
+            <div class="row__posters">
+              <img alt="banner" class="row_poster" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiAgB9nKXNGRFhM2AtCBoa8Sk4WNSkm0Nq-EDCZAgdiKSiLZpygxfKTgA7TYnfLSH7Ld5Q0mhQE96NOLDikELgO0yHDUU1ablpLJL3pVPIHHUZ4hkFjMmL6z1NIE9Wbdd_gC4FurHenT7AJdwqlBVuGUO8F_pHbt76ICd96yf-eUB-MVbajsMA0abciDPl1/s1280/IMG_20240126_082447_212.jpg" onclick="window.location.href='https://muviplex2024.blogspot.com/2024/01/animal.html'"/>
+               <img alt="banner" class="row_poster" src="https://sund-images.sunnxt.com/165835/640x360_Enthiran4K_165835_c7a4f005-53c1-427b-ab13-133d9ef91319.jpg" onclick="window.location.href='https://muviplex2024.blogspot.com/2024/01/enthiran-2010.html'"/>
+              
+              <img alt="banner" class="row_poster" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi9lj-mxuxkSwTuI5rGIjb8HvdaPmnk_h89UB-BVlqr-7IUaFmmxcNLQFWumx32cGrJYyvUXEHY3e_SGdNTvjx2Ju2j6DwRK6NffdQ1QHqF7dWTGvn9MMW2Ojj-fURc5vuQz2ZWnNS0V301P1tVCtKRrx8wABl3Huyr5n-7LvdTttp7o53mWbzl95TIOa4b/s711/salaar.jpg" onclick="window.location.href='https://muviplex2024.blogspot.com/2024/01/salaar.html'"/>
+              <img alt="banner" class="row_poster" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhLjZ4PHtW6p5aCvWve8Vo_KZ8_-l1jJc3_pJgKSJm4ed-4Au73t1nU9XKL-SoIQNz-MPuJPnV8tGBrgzQvz8hv6G5JXyU1owhj-70GPuLS-Qxl1l4jYdkkTEd-jHe6DUV2c1hNzApvJrjEST7UjrC1XaR_Xym3EfgIQRJHVTHfHxwJCh5wgR3wPWOiXfcL/s1280/IMG_20240107_103423_795.jpg" onclick="window.location.href='https://muviplex2024.blogspot.com/2024/01/tiger-3.html'"/>
+                <img alt="banner" class="row_poster" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgGt9eJAXsGbB_yGV_CvDNwWJFJu1ZiJAgqQiwhjH9IcMw3MgNOgmknrH92sbf1O5Ktuo5YqDOrr_Wrdvk6rKnwOvjXPWqSxY_6t1Beb28GwmRBGb1dH4hodh41f01YiIzwgyJ_XKN-9SMpW9rn0TMs7HclUukgcrXimP_ZLqSJRkom8HEKAZR0lJ4sF-c/w640-h360/Untitled%20design%20(2).png" onclick="window.location.href='https://muviplex2024.blogspot.com/2023/12/jawan-import-urlhttpsfonts.html'"/>
+                <img alt="banner" class="row_poster" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEipWh-gQcJsA5TmAAlu858S-Prquffu2mt69drmSMB_jXiGC7ojE-eJQI3eycfJVRSHP94fFzbACDVMIHx-IPVFTDp-07de27IsV7fIMSQM6Z_H3kRADvfD20hqigSVRGl8gjoIcuCk0tj66tPfsQ1jxKr4A72a4g53YuaS88FkLEFVEzM3XcWAu7TdHwjV/s1280/jigarthanda-double-x-et00359702-1699446701.jpeg" onclick="window.location.href='https://muviplex2024.blogspot.com/2023/12/jigarthanda-doublex.html'"/>
+                <img alt="banner" class="row_poster" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgUYovBKj8zYAlhMsoGoTepdYubUaUaCuoLYVZZiZP6Bf9_ONmP73R-oGPjOIQ-afWCJPfeZ8rxEiSvQ3T5DlOGZXK12aFnkJmKDV8h-WFwursWrUPgqcstZvQf2LY_BBQhc4KR-Vgn7ELwULoAK9hBAz9yiOmQUmyfZZI83y2T7OnAD1OjucteIwSl4S4/s1280/Untitled%20design.png" onclick="window.location.href='https://muviplex2024.blogspot.com/2023/12/jawan-2023.html'"/>
+                <img alt="banner" class="row_poster" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjnCcRJc-9RGdLRavIS96_2BrKbUhtJwczSR2BjIWKnwqf1ZSnoYDE6VlvAhOVVRp_7dRraL_MfNQJNT35IPop1pGJTT16dtsPlLYuq40nQEUN0zqo0Vjn4a5xC7oxWxZoYMwch4GlwlDuA_3gcjTejdkDhUiYrvUJNbjNEKblGKB5ykTtUSUCTLfkBCZ3u/s512/AAAABSnhNFsA1q_YL8JarKkgUE-we_P_M0WAqnUZQzvdUImmDBjB0Qsr80ILPAU2lUBJiTdTCcuGXbotcXAOyEzZ41Na4RtU-ScZHExp.jpg" onclick="window.location.href='https://muviplex2024.blogspot.com/2023/12/adipurush-2023.html'"/>
+                
+            </div>
+        </div>
+        <script>
+            const nav =  document.getElementById('nav')
+
+            window.addEventListener('scroll', ()=> {
+                if(window.scrollY >= 100){
+                    nav.classList.add('nav__black');
+                } else {
+                    nav.classList.remove('nav__black');
+                }
+                
+            });
+        </script>
+
+    </body>
+</html>
